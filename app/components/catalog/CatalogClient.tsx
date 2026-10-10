@@ -26,7 +26,7 @@ function onMove(e: React.MouseEvent<HTMLElement>) {
 
 const matches = (item: EquipmentItem, q: string) => {
   if (!q) return true;
-  const hay = [item.title, item.desc, item.tag, ...item.specs].join(" ").toLowerCase();
+  const hay = [item.title, item.desc, ...item.specs].join(" ").toLowerCase();
   return q
     .toLowerCase()
     .split(/\s+/)
